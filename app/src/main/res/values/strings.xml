@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Seven Winds Studio</string>
+    <string name="nearest_coffee_shops">Ближайшие кофейни</string>
+    <string name="on_map">На карте</string>
+    <string name="enable_location_message">Включите геолокацию для отображения расстояния до ближайших кофеен</string>
+    <string name="enable">Включить</string>
+    <string name="retry">Повторить</string>
+    <string name="distance_unknown">Расстояние неизвестно</string>
+    <string name="meters_away">%1$d м от вас</string>
+    <string name="km_away">%1$s км от вас</string>
+    <string name="order_title">Ваш заказ</string>
+    <string name="pay">Оплатить</string>
+    <string name="order_wait_time">Время ожидания заказа\n15 минут!</string>
+    <string name="thank_you">Спасибо, что выбрали нас!</string>
+    <string name="menu">Меню</string>
+    <string name="go_to_pay">Перейти к оплате</string>
+    <string name="password">Пароль</string>
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="email">e-mail</string>
+    <string name="continue_btn">Продолжить</string>
+    <string name="skip">Пропустить</string>
+    <string name="location_permission_title">Геолокация</string>
+    <string name="location_permission_message">Для отображения расстояния до кофейни разрешите доступ к геолокации</string>
+    <string name="error_loading_coffee_shops">Ошибка загрузки кофейни</string>
+    <string name="back">Назад</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="already_have_account">Уже есть аккаунт? Войти</string>
+    <string name="no_account_register">Нет аккаунта? Зарегистрироваться</string>
+</resources>

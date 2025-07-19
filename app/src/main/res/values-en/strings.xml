@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Seven Winds Studio</string>
+    <string name="nearest_coffee_shops">Nearest coffee shops</string>
+    <string name="on_map">On map</string>
+    <string name="enable_location_message">Enable location to show distance to the nearest coffee shops</string>
+    <string name="enable">Enable</string>
+    <string name="retry">Retry</string>
+    <string name="distance_unknown">Distance unknown</string>
+    <string name="meters_away">%1$d m away</string>
+    <string name="km_away">%1$s km away</string>
+    <string name="order_title">Your order</string>
+    <string name="pay">Pay</string>
+    <string name="order_wait_time">Order wait time\n15 minutes!</string>
+    <string name="thank_you">Thank you for choosing us!</string>
+    <string name="menu">Menu</string>
+    <string name="go_to_pay">Go to payment</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">e-mail</string>
+    <string name="continue_btn">Continue</string>
+    <string name="skip">Skip</string>
+    <string name="location_permission_title">Location</string>
+    <string name="location_permission_message">To show the distance to the coffee shop, allow access to location</string>
+    <string name="error_loading_coffee_shops">Error loading coffee shops</string>
+    <string name="back">Back</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="no_account_register">No account? Register</string>
+</resources> 
