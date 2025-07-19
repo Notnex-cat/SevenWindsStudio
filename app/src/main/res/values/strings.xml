@@ -27,4 +27,11 @@
     <string name="repeat_password">Повторите пароль</string>
     <string name="already_have_account">Уже есть аккаунт? Войти</string>
     <string name="no_account_register">Нет аккаунта? Зарегистрироваться</string>
+    <string name="error_fill_all_fields">Пожалуйста, заполните все поля</string>
+    <string name="error_invalid_email">Введите корректный email</string>
+    <string name="error_password_too_short">Пароль должен содержать минимум 6 символов</string>
+    <string name="error_registration">Ошибка регистрации</string>
+    <string name="error_login">Ошибка входа</string>
+    <string name="placeholder_email">example@example.ru</string>
+    <string name="placeholder_password">******</string>
 </resources>

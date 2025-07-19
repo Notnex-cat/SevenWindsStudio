@@ -2,17 +2,14 @@ package com.notnex.sevenwindsstudio
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.yandex.mapkit.MapKitFactory
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.notnex.sevenwindsstudio.data.model.Location
+import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
-import com.yandex.mapkit.map.PlacemarkMapObject
 import com.yandex.mapkit.map.MapObjectCollection
 import com.yandex.mapkit.mapview.MapView
 import com.yandex.runtime.image.ImageProvider
-import com.notnex.sevenwindsstudio.data.model.Location
-import com.notnex.sevenwindsstudio.R
-import android.util.Log
 
 class MapActivity : AppCompatActivity() {
     private lateinit var mapView: MapView

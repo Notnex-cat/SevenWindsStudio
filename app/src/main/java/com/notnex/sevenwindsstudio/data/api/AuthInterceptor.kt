@@ -11,10 +11,6 @@ class AuthInterceptor : Interceptor {
         authToken = token
     }
     
-    fun clearToken() {
-        authToken = null
-    }
-    
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest = chain.request()
         

@@ -52,14 +52,6 @@ class LocationsViewModel(context: Context) : ViewModel() {
                 }
         }
     }
-    
-    fun hasLocationPermission(): Boolean {
-        return locationManager.hasLocationPermission()
-    }
-    
-    fun resetState() {
-        _locationsState.value = LocationsState.Idle
-    }
 }
 
 sealed class LocationsState {

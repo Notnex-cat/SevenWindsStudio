@@ -81,7 +81,7 @@ fun RegisterScreen(
             onValueChange = { login = it },
             placeholder = {
                 Text(
-                    text = "example@example.ru",
+                    text = stringResource(R.string.placeholder_email),
                     color = Color(0xFFD2691E)
                 )
             },
@@ -118,7 +118,7 @@ fun RegisterScreen(
             onValueChange = { password = it },
             placeholder = {
                 Text(
-                    text = "******",
+                    text = stringResource(R.string.placeholder_password),
                     color = Color(0xFFD2691E)
                 )
             },
@@ -156,7 +156,7 @@ fun RegisterScreen(
             onValueChange = { repeatPassword = it },
             placeholder = {
                 Text(
-                    text = "******",
+                    text = stringResource(R.string.placeholder_password),
                     color = Color(0xFFD2691E)
                 )
             },

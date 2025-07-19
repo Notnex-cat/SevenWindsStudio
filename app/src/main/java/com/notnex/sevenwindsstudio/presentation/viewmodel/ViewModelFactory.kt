@@ -18,9 +18,6 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             modelClass.isAssignableFrom(MenuViewModel::class.java) -> {
                 MenuViewModel(context) as T
             }
-            modelClass.isAssignableFrom(PermissionViewModel::class.java) -> {
-                PermissionViewModel(context) as T
-            }
             else -> {
                 throw IllegalArgumentException("Unknown ViewModel class")
             }

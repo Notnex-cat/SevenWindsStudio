@@ -62,22 +62,6 @@ class MenuViewModel(context: Context) : ViewModel() {
         
         _orderItems.value = currentOrder
     }
-    
-    fun getOrderItemsList(): List<OrderItem> {
-        return _orderItems.value.values.toList()
-    }
-    
-    fun getTotalPrice(): Int {
-        return _orderItems.value.values.sumOf { it.menuItem.price * it.quantity }
-    }
-    
-    fun clearOrder() {
-        _orderItems.value = emptyMap()
-    }
-    
-    fun resetState() {
-        _menuState.value = MenuState.Idle
-    }
 }
 
 sealed class MenuState {

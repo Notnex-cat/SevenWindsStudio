@@ -1,7 +1,9 @@
 package com.notnex.sevenwindsstudio.presentation.navigation
 
 import android.content.Intent
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -11,7 +13,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.notnex.sevenwindsstudio.MapActivity
 import com.notnex.sevenwindsstudio.data.location.LocationManager
-import com.notnex.sevenwindsstudio.presentation.screens.*
+import com.notnex.sevenwindsstudio.presentation.screens.LocationsScreen
+import com.notnex.sevenwindsstudio.presentation.screens.LoginScreen
+import com.notnex.sevenwindsstudio.presentation.screens.MenuScreen
+import com.notnex.sevenwindsstudio.presentation.screens.OrderScreen
+import com.notnex.sevenwindsstudio.presentation.screens.PermissionScreen
+import com.notnex.sevenwindsstudio.presentation.screens.RegisterScreen
 import com.notnex.sevenwindsstudio.presentation.viewmodel.AuthViewModel
 import com.notnex.sevenwindsstudio.presentation.viewmodel.MenuViewModel
 import com.notnex.sevenwindsstudio.presentation.viewmodel.ViewModelFactory

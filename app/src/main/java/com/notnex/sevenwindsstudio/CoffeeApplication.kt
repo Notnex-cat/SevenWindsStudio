@@ -1,10 +1,8 @@
 package com.notnex.sevenwindsstudio
 
 import android.app.Application
-import android.util.Log
 import com.notnex.sevenwindsstudio.data.local.UserPreferences
 import com.yandex.mapkit.MapKitFactory
-import com.notnex.sevenwindsstudio.BuildConfig
 
 class CoffeeApplication : Application() {
     
@@ -15,7 +13,7 @@ class CoffeeApplication : Application() {
         super.onCreate()
         userPreferences = UserPreferences(this)
         val apiKey = BuildConfig.MAPKIT_API_KEY
-        if (apiKey.isNullOrBlank()) {
+        if (apiKey.isBlank()) {
         } else {
             MapKitFactory.setApiKey(apiKey)
         }

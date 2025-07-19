@@ -27,4 +27,11 @@
     <string name="repeat_password">Repeat password</string>
     <string name="already_have_account">Already have an account? Login</string>
     <string name="no_account_register">No account? Register</string>
+    <string name="error_fill_all_fields">Please fill in all fields</string>
+    <string name="error_invalid_email">Enter a valid email</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_registration">Registration error</string>
+    <string name="error_login">Login error</string>
+    <string name="placeholder_email">example@example.ru</string>
+    <string name="placeholder_password">******</string>
 </resources> 

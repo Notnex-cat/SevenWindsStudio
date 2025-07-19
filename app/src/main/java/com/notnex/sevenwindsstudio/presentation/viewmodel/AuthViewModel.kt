@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import com.notnex.sevenwindsstudio.R
 
 class AuthViewModel(context: Context) : ViewModel() {
     
@@ -19,17 +20,17 @@ class AuthViewModel(context: Context) : ViewModel() {
     
     fun register(login: String, password: String) {
         if (login.isBlank() || password.isBlank()) {
-            _authState.value = AuthState.Error("Пожалуйста, заполните все поля")
+            _authState.value = AuthState.Error(context.getString(R.string.error_fill_all_fields))
             return
         }
         
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(login).matches()) {
-            _authState.value = AuthState.Error("Введите корректный email")
+            _authState.value = AuthState.Error(context.getString(R.string.error_invalid_email))
             return
         }
         
         if (password.length < 6) {
-            _authState.value = AuthState.Error("Пароль должен содержать минимум 6 символов")
+            _authState.value = AuthState.Error(context.getString(R.string.error_password_too_short))
             return
         }
         
@@ -41,14 +42,14 @@ class AuthViewModel(context: Context) : ViewModel() {
                     _authState.value = AuthState.Success(response)
                 }
                 .onFailure { exception ->
-                    _authState.value = AuthState.Error(exception.message ?: "Ошибка регистрации")
+                    _authState.value = AuthState.Error(exception.message ?: context.getString(R.string.error_registration))
                 }
         }
     }
     
     fun login(login: String, password: String) {
         if (login.isBlank() || password.isBlank()) {
-            _authState.value = AuthState.Error("Пожалуйста, заполните все поля")
+            _authState.value = AuthState.Error(context.getString(R.string.error_fill_all_fields))
             return
         }
         
@@ -60,7 +61,7 @@ class AuthViewModel(context: Context) : ViewModel() {
                     _authState.value = AuthState.Success(response)
                 }
                 .onFailure { exception ->
-                    _authState.value = AuthState.Error(exception.message ?: "Ошибка входа")
+                    _authState.value = AuthState.Error(exception.message ?: context.getString(R.string.error_login))
                 }
         }
     }
