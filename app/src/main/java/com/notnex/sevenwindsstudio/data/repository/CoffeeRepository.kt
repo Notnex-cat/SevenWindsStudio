@@ -9,10 +9,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import android.util.Log
 
-class CoffeeRepository(context: Context) {
+class CoffeeRepository() {
     
     private val apiService = NetworkModule.apiService
-    private val userPreferences = (context.applicationContext as CoffeeApplication).userPreferences
+    private val userPreferences = CoffeeApplication.instance.userPreferences
     
     suspend fun register(login: String, password: String): Result<AuthResponse> = withContext(Dispatchers.IO) {
         try {

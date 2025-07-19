@@ -10,7 +10,7 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
             modelClass.isAssignableFrom(AuthViewModel::class.java) -> {
-                AuthViewModel(context) as T
+                AuthViewModel() as T
             }
             modelClass.isAssignableFrom(LocationsViewModel::class.java) -> {
                 LocationsViewModel(context) as T

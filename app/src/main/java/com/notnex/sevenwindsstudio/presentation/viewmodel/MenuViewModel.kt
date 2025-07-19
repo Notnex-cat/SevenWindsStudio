@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class MenuViewModel(context: Context) : ViewModel() {
     
-    private val repository = CoffeeRepository(context)
+    private val repository = CoffeeRepository()
     
     private val _menuState = MutableStateFlow<MenuState>(MenuState.Idle)
     val menuState: StateFlow<MenuState> = _menuState.asStateFlow()
@@ -46,6 +46,10 @@ class MenuViewModel(context: Context) : ViewModel() {
         }
         
         _orderItems.value = currentOrder
+    }
+
+    fun clearOrder() {
+        _orderItems.value = emptyMap()
     }
     
     fun removeFromOrder(menuItem: MenuItem) {

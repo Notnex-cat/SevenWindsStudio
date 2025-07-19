@@ -26,7 +26,7 @@ import com.notnex.sevenwindsstudio.presentation.viewmodel.ViewModelFactory
 @Composable
 fun AppNavigation(navController: NavHostController) {
     val context = LocalContext.current
-    val authViewModel = remember { AuthViewModel(context) }
+    val authViewModel = remember { AuthViewModel() }
     val locationManager = remember { LocationManager(context) }
     
     // Определяем стартовый экран на основе авторизации

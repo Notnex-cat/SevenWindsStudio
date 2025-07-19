@@ -41,6 +41,7 @@ import com.notnex.sevenwindsstudio.R
 import com.notnex.sevenwindsstudio.presentation.viewmodel.AuthState
 import com.notnex.sevenwindsstudio.presentation.viewmodel.AuthViewModel
 import com.notnex.sevenwindsstudio.presentation.viewmodel.ViewModelFactory
+import com.notnex.sevenwindsstudio.presentation.viewmodel.AuthError
 
 @Composable
 fun LoginScreen(
@@ -200,8 +201,16 @@ fun LoginScreen(
         // Ошибка
         if (authState is AuthState.Error) {
             Spacer(modifier = Modifier.height(16.dp))
+            val error = (authState as AuthState.Error).error
+            val errorText = when (error) {
+                AuthError.FILL_ALL_FIELDS -> stringResource(R.string.error_fill_all_fields)
+                AuthError.INVALID_EMAIL -> stringResource(R.string.error_invalid_email)
+                AuthError.PASSWORD_TOO_SHORT -> stringResource(R.string.error_password_too_short)
+                AuthError.REGISTRATION -> stringResource(R.string.error_registration)
+                AuthError.LOGIN -> stringResource(R.string.error_login)
+            }
             Text(
-                text = (authState as AuthState.Error).message,
+                text = errorText,
                 color = Color.Red,
                 fontSize = 14.sp
             )

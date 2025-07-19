@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class LocationsViewModel(context: Context) : ViewModel() {
     
-    private val repository = CoffeeRepository(context)
+    private val repository = CoffeeRepository()
     private val locationManager = LocationManager(context)
     
     private val _locationsState = MutableStateFlow<LocationsState>(LocationsState.Idle)
